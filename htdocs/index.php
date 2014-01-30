@@ -1,6 +1,9 @@
 <?php
 $host = explode(":", $_SERVER['HTTP_HOST'], 2);
 $host = reset($host);
+exec("lsusb", $lsusb_out);
+var_dump($lsusb_out);
+$has_controls = true;
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
@@ -74,38 +77,42 @@ $host = reset($host);
         </div>
       </div>
     </div>
-    <div class="container controls">
-      <div class="btn-group waist">
-        <a href="action.php?joint=waist&action=left" class="btn btn-large left">Shoulder Left</a>
-        <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Shoulder Right</a>
-      </div>
+    <?php if($has_controls): ?>
+      <div class="container controls">
+        <div class="btn-group waist">
+          <a href="action.php?joint=waist&action=left" class="btn btn-large left">Shoulder Left</a>
+          <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Shoulder Right</a>
+        </div>
 
-      <div class="btn-group hip">
-        <a href="action.php?joint=hip&action=up" class="btn btn-large left">Shoulder Up</a>
-        <a href="action.php?joint=hip&action=down"  class="btn btn-large right">Shoulder Down</a>
-      </div>
+        <div class="btn-group hip">
+          <a href="action.php?joint=hip&action=up" class="btn btn-large left">Shoulder Up</a>
+          <a href="action.php?joint=hip&action=down"  class="btn btn-large right">Shoulder Down</a>
+        </div>
 
-      <div class="btn-group elbow">
-        <a href="action.php?joint=elbow&action=up" class="btn btn-large left">Elbow Up</a>
-        <a href="action.php?joint=elbow&action=down"  class="btn btn-large right">Elbow Down</a>
-      </div>
+        <div class="btn-group elbow">
+          <a href="action.php?joint=elbow&action=up" class="btn btn-large left">Elbow Up</a>
+          <a href="action.php?joint=elbow&action=down"  class="btn btn-large right">Elbow Down</a>
+        </div>
 
-      <div class="btn-group wrist">
-        <a href="action.php?joint=wrist&action=up" class="btn btn-large left">Wrist Up</a>
-        <a href="action.php?joint=wrist&action=down"  class="btn btn-large right">Wrist Down</a>
-      </div>
+        <div class="btn-group wrist">
+          <a href="action.php?joint=wrist&action=up" class="btn btn-large left">Wrist Up</a>
+          <a href="action.php?joint=wrist&action=down"  class="btn btn-large right">Wrist Down</a>
+        </div>
 
-      <div class="btn-group grip">
-        <a href="action.php?joint=grip&action=open" class="btn btn-large left">Grip Open</a>
-        <a href="action.php?joint=grip&action=close"  class="btn btn-large right">Grip Close</a>
-      </div>
+        <div class="btn-group grip">
+          <a href="action.php?joint=grip&action=open" class="btn btn-large left">Grip Open</a>
+          <a href="action.php?joint=grip&action=close"  class="btn btn-large right">Grip Close</a>
+        </div>
 
-      <div class="btn-group light">
-        <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
-        <a href="action.php?joint=light&action=rave" class="btn-large btn left">Flash</a>
-        <a href="action.php?joint=light&action=off" class="btn-large btn left">Light Off</a>
+        <div class="btn-group light">
+          <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
+          <a href="action.php?joint=light&action=rave" class="btn-large btn left">Flash</a>
+          <a href="action.php?joint=light&action=off" class="btn-large btn left">Light Off</a>
+        </div>
       </div>
-    </div>
+    <?php else: ?>
+      No controls available - Arm power off.
+    <?php endif; ?>
     <div class="container">
       <!-- FOOTER -->
       <footer>
