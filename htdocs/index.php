@@ -77,13 +77,12 @@ $host = reset($host);
     <div class="container controls">
       <div class="btn-group waist">
         <a href="action.php?joint=waist&action=left" class="btn btn-large left">Left</a>
-        <a href="action.php?joint=waist&action=stop"  class="btn btn-large stop">Stop</a>
         <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Right</a>
       </div>
 
       <div class="btn-group light">
         <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
-        <a href="action.php?joint=light&action=rave" class="btn-large btn left">RAVE</a>
+        <a href="action.php?joint=light&action=rave" class="btn-large btn left">Flash</a>
         <a href="action.php?joint=light&action=off" class="btn-large btn left">Light Off</a>
       </div>
     </div>
