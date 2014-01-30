@@ -1,5 +1,6 @@
 body {
     background: #333;
+    color: #FEFEFE;
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img{
     margin-left: auto;

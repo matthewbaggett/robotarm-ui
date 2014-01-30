@@ -102,9 +102,16 @@ foreach($lsusb_out as $lsusb_out_row){
           <a href="action.php?joint=waist&action=right"  class="btn btn-success btn-large right">Shoulder Right</a>
         </div>
       </div>
+
     <?php else: ?>
-      No controls available - Arm power off.
+      <div class="container">
+        No controls available - Arm power off.
+      </div>
     <?php endif; ?>
+
+    <div class="container gamepad">
+    </div>
+
     <div class="container">
       <!-- FOOTER -->
       <footer>
