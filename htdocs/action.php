@@ -16,6 +16,7 @@ switch($_GET['action']){
   case 'stop':
   case 'on':
   case 'off':
+  case 'rave':
     // OK!
     break;
   default:
@@ -41,6 +42,13 @@ switch($_GET['joint']){
   case 'light':
     if($_GET['action'] == 'on'){
       $response =  exec("robotarm 00 00 01");
+    }elseif($_GET['action'] == 'rave'){
+      for($i = 0; $i< 100; $i++){
+        sleep(0.1);
+        $response =  exec("robotarm 00 00 01");
+        sleep(0.1);
+        $response = exec("robotarm 00 00 00");
+      }
     }else{
       $response = exec("robotarm 00 00 00");
     }

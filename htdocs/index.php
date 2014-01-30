@@ -83,6 +83,7 @@ $host = reset($host);
 
       <div class="btn-group light">
         <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
+        <a href="action.php?joint=light&action=rave" class="btn-large btn left">RAVE</a>
         <a href="action.php?joint=light&action=off" class="btn-large btn left">Light Off</a>
       </div>
     </div>
