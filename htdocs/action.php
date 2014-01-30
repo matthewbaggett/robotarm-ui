@@ -50,9 +50,21 @@ switch($_GET['joint']){
         $response = exec("robotarm 00 00 00");
       }
     }else{
-      $response = exec("robotarm 00 00 00");
+      exec("robotarm 00 00 00");
     }
     break;
+  case 'waist':
+    switch($_GET['action']){
+      case 'left':
+        exec("robotarm 00 02 00");
+        break;
+      case 'right':
+        exec("robotarm 00 01 00");
+        break;
+      case 'stop':
+        exec("robotarm 00 00 00");
+        break;
+    }
 }
 
 var_dump($response);
