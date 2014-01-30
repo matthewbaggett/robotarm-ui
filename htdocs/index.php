@@ -1,3 +1,7 @@
+<?php
+$host = explode(":", $_SERVER['HTTP_HOST'],2);
+$host = reset($host);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +14,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
   </head>
   <body>
-    <img src="<?php echo $_SERVER['HTTP_HOST']; ?>:8080/?action=stream" />
+    <img src="http://<?php echo $host ?>:8080/?action=stream" />
   </body>
 </html>
