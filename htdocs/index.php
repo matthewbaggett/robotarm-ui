@@ -58,7 +58,7 @@ foreach($lsusb_out as $lsusb_out_row){
           <img src="http://<?php echo $host ?>:8080/?action=stream" />
           <div class="container">
             <div class="carousel-caption">
-              <h1>DOZER DERP</h1>
+              <h1>DOZER</h1>
             </div>
           </div>
         </div>
