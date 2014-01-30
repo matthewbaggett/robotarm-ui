@@ -71,22 +71,32 @@ foreach($lsusb_out as $lsusb_out_row){
           <a href="action.php?joint=light&action=rave" class="btn-large btn-warning btn left">Flash</a>
           <a href="action.php?joint=light&action=off" class="btn-large btn-success btn left">Light Off</a>
         </div>
+      </div>
+      <div class="container controls">
         <div class="btn-group grip">
           <a href="action.php?joint=grip&action=open" class="btn btn-success btn-large left">Grip Open</a>
           <a href="action.php?joint=grip&action=close"  class="btn btn-success btn-large right">Grip Close</a>
         </div>
+      </div>
+      <div class="container controls">
         <div class="btn-group wrist">
           <a href="action.php?joint=wrist&action=up" class="btn btn-success btn-large left">Wrist Up</a>
           <a href="action.php?joint=wrist&action=down"  class="btn btn-success btn-large right">Wrist Down</a>
         </div>
+      </div>
+      <div class="container controls">
         <div class="btn-group elbow">
           <a href="action.php?joint=elbow&action=up" class="btn btn-success btn-large left">Elbow Up</a>
           <a href="action.php?joint=elbow&action=down"  class="btn btn-success btn-large right">Elbow Down</a>
         </div>
+      </div>
+      <div class="container controls">
         <div class="btn-group hip">
           <a href="action.php?joint=hip&action=up" class="btn btn-success btn-large left">Shoulder Up</a>
           <a href="action.php?joint=hip&action=down"  class="btn btn-success btn-large right">Shoulder Down</a>
         </div>
+      </div>
+      <div class="container controls">
         <div class="btn-group waist">
           <a href="action.php?joint=waist&action=left" class="btn btn-success btn-large left">Shoulder Left</a>
           <a href="action.php?joint=waist&action=right"  class="btn btn-success btn-large right">Shoulder Right</a>
