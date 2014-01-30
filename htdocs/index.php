@@ -76,13 +76,18 @@ $host = reset($host);
     </div>
     <div class="container controls">
       <div class="btn-group waist">
-        <a href="action.php?joint=waist&action=left" class="btn btn-large left">Left</a>
-        <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Right</a>
+        <a href="action.php?joint=waist&action=left" class="btn btn-large left">Shoulder Left</a>
+        <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Shoulder Right</a>
       </div>
 
       <div class="btn-group hip">
-        <a href="action.php?joint=hip&action=up" class="btn btn-large left">Up</a>
-        <a href="action.php?joint=hip&action=down"  class="btn btn-large right">Down</a>
+        <a href="action.php?joint=hip&action=up" class="btn btn-large left">Shoulder Up</a>
+        <a href="action.php?joint=hip&action=down"  class="btn btn-large right">Shoulder Down</a>
+      </div>
+
+      <div class="btn-group elbow">
+        <a href="action.php?joint=elbow&action=up" class="btn btn-large left">Elbow Up</a>
+        <a href="action.php?joint=elbow&action=down"  class="btn btn-large right">Elbow Down</a>
       </div>
 
       <div class="btn-group light">

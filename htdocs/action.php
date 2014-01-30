@@ -34,12 +34,12 @@ switch($_GET['joint']){
   case 'waist':
     switch($_GET['action']){
       case 'left':
-        exec("robotarm 00 02 00");
+        exec("robotarm 00 01 00");
         sleep(1);
         exec("robotarm 00 00 00");
         break;
       case 'right':
-        exec("robotarm 00 01 00");
+        exec("robotarm 00 02 00");
         sleep(1);
         exec("robotarm 00 00 00");
         break;
@@ -55,6 +55,21 @@ switch($_GET['joint']){
         break;
       case 'down':
         exec("robotarm 80 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+    }
+    break;
+
+  case 'elbow':
+    switch($_GET['action']){
+      case 'up':
+        exec("robotarm 10 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+      case 'down':
+        exec("robotarm 20 00 00");
         sleep(1);
         exec("robotarm 00 00 00");
         break;
