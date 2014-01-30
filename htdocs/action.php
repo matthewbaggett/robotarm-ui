@@ -16,13 +16,13 @@
  * robotarm 00 00 00 # Stop all motion & turn off LED
  */
 
-$lights_state = file_exists("lights.lock")?'01':'00';
+$lights_state = file_exists("/tmp/lights.lock")?'01':'00';
 
 switch($_GET['joint']){
   case 'light':
     if($_GET['action'] == 'on'){
       $response =  exec("robotarm 00 00 01");
-      touch("lights.lock");
+      touch("/tmp/lights.lock");
     }elseif($_GET['action'] == 'rave'){
       for($i = 0; $i < 5; $i++){
         sleep(1);
@@ -31,7 +31,7 @@ switch($_GET['joint']){
         $response = exec("robotarm 00 00 00");
       }
     }else{
-      unlink("lights.lock");
+      unlink("/tmp/lights.lock");
       exec("robotarm 00 00 00");
     }
     break;
