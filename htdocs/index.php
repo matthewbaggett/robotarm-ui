@@ -2,8 +2,12 @@
 $host = explode(":", $_SERVER['HTTP_HOST'], 2);
 $host = reset($host);
 exec("lsusb", $lsusb_out);
-var_dump($lsusb_out);
-$has_controls = true;
+$has_controls = false;
+foreach($lsusb_out as $lsusb_out_row){
+  if(stripos($lsusb_out_row,"1267:0000")){
+    $has_controls = true;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
