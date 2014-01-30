@@ -90,6 +90,16 @@ $host = reset($host);
         <a href="action.php?joint=elbow&action=down"  class="btn btn-large right">Elbow Down</a>
       </div>
 
+      <div class="btn-group wrist">
+        <a href="action.php?joint=wrist&action=up" class="btn btn-large left">Wrist Up</a>
+        <a href="action.php?joint=wrist&action=down"  class="btn btn-large right">Wrist Down</a>
+      </div>
+
+      <div class="btn-group grip">
+        <a href="action.php?joint=grip&action=open" class="btn btn-large left">Grip Open</a>
+        <a href="action.php?joint=grip&action=close"  class="btn btn-large right">Grip Close</a>
+      </div>
+
       <div class="btn-group light">
         <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
         <a href="action.php?joint=light&action=rave" class="btn-large btn left">Flash</a>

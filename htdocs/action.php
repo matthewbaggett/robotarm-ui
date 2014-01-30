@@ -76,6 +76,36 @@ switch($_GET['joint']){
     }
     break;
 
+  case 'wrist':
+    switch($_GET['action']){
+      case 'up':
+        exec("robotarm 04 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+      case 'down':
+        exec("robotarm 08 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+    }
+    break;
+
+  case 'grip':
+    switch($_GET['action']){
+      case 'close':
+        exec("robotarm 01 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+      case 'open':
+        exec("robotarm 02 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
+        break;
+    }
+    break;
+
 }
 
 var_dump($response);
