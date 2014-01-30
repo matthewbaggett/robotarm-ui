@@ -31,13 +31,16 @@ jQuery(document).ready(function(){
 
     var gamepadSupportAvailable = Modernizr.gamepads;
 
-    console.log("Gamepad support available");
+
 
     if(gamepadSupportAvailable) {
+        console.log("Gamepad support available");
         window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
         window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
         // Webkit browser that uses prefixes
         var interval = setInterval(webkitGP, 500);
+    }else{
+        console.log("Gamepad support unavailable");
     }
 
 
