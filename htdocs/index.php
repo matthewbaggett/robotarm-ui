@@ -3,7 +3,7 @@ $host = explode(":", $_SERVER['HTTP_HOST'], 2);
 $host = reset($host);
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dozer C&C</title>
@@ -73,10 +73,22 @@ $host = reset($host);
       </div>
     </div>
     <div class="container">
+      <div class="btn-group waist">
+        <a href="action.php?joint=waist&action=left" class="btn left">Left</a>
+        <a href="action.php?joint=waist&action=stop"  class="btn stop">Stop</a>
+        <a href="action.php?joint=waist&action=right"  class="btn right">Right</a>
+      </div>
+
+      <div class="btn-group light">
+        <a href="action.php?joint=light&action=on" class="btn left">Light On</a>
+        <a href="action.php?joint=light&action=off" class="btn left">Light Off</a>
+      </div>
+    </div>
+    <div class="container">
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; <?php echo date("Y"); ?> Matthew Baggett.</p>
+        <p class="pull-right"><a href="mailto:matthew@baggett.me">&copy; <?php echo date("Y"); ?> Matthew Baggett</a></p>
       </footer>
 
     </div>
