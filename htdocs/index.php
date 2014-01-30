@@ -21,6 +21,8 @@ $host = reset($host);
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/dozer.js"></script>
+
   </head>
   <body>
     <div class="navbar-wrapper">
@@ -72,16 +74,16 @@ $host = reset($host);
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container controls">
       <div class="btn-group waist">
-        <a href="action.php?joint=waist&action=left" class="btn left">Left</a>
-        <a href="action.php?joint=waist&action=stop"  class="btn stop">Stop</a>
-        <a href="action.php?joint=waist&action=right"  class="btn right">Right</a>
+        <a href="action.php?joint=waist&action=left" class="btn btn-large left">Left</a>
+        <a href="action.php?joint=waist&action=stop"  class="btn btn-large stop">Stop</a>
+        <a href="action.php?joint=waist&action=right"  class="btn btn-large right">Right</a>
       </div>
 
       <div class="btn-group light">
-        <a href="action.php?joint=light&action=on" class="btn left">Light On</a>
-        <a href="action.php?joint=light&action=off" class="btn left">Light Off</a>
+        <a href="action.php?joint=light&action=on" class="btn btn-large left">Light On</a>
+        <a href="action.php?joint=light&action=off" class="btn-large btn left">Light Off</a>
       </div>
     </div>
     <div class="container">

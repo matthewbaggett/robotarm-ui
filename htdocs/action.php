@@ -40,9 +40,11 @@ switch($_GET['action']){
 switch($_GET['joint']){
   case 'light':
     if($_GET['action'] == 'on'){
-      exec("sudo ../robotarm 00 00 01");
+      $response =  exec("sudo ../robotarm 00 00 01");
     }else{
-      exec("sudo ../robotarm 00 00 00");
+      $response = exec("sudo ../robotarm 00 00 00");
     }
     break;
 }
+
+var_dump($response);
