@@ -4,7 +4,7 @@ $host = reset($host);
 exec("lsusb", $lsusb_out);
 $has_controls = false;
 foreach($lsusb_out as $lsusb_out_row){
-  if(stripos($lsusb_out_row,"1267:0000")){
+  if(stripos($lsusb_out_row, "1267:0000") !== FALSE){
     $has_controls = true;
   }
 }
