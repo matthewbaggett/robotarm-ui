@@ -21,9 +21,9 @@ switch($_GET['joint']){
       $response =  exec("robotarm 00 00 01");
     }elseif($_GET['action'] == 'rave'){
       for($i = 0; $i < 5; $i++){
-        sleep(0.5);
+        sleep(1);
         $response =  exec("robotarm 00 00 01");
-        sleep(0.5);
+        sleep(1);
         $response = exec("robotarm 00 00 00");
       }
     }else{
@@ -78,12 +78,12 @@ switch($_GET['joint']){
 
   case 'wrist':
     switch($_GET['action']){
-      case 'up':
+      case 'down':
         exec("robotarm 04 00 00");
         sleep(1);
         exec("robotarm 00 00 00");
         break;
-      case 'down':
+      case 'up':
         exec("robotarm 08 00 00");
         sleep(1);
         exec("robotarm 00 00 00");
@@ -95,12 +95,12 @@ switch($_GET['joint']){
     switch($_GET['action']){
       case 'close':
         exec("robotarm 01 00 00");
-        sleep(1);
+        sleep(0.25);
         exec("robotarm 00 00 00");
         break;
       case 'open':
         exec("robotarm 02 00 00");
-        sleep(1);
+        sleep(0.25);
         exec("robotarm 00 00 00");
         break;
     }
