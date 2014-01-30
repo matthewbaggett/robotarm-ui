@@ -32,7 +32,7 @@ $host = reset($host);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="#" class="navbar-brand">Project name</a>
+              <a href="#" class="navbar-brand">Dozer C&amp;C</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -59,12 +59,6 @@ $host = reset($host);
       </div>
     </div>
     <div data-ride="carousel" class="carousel slide" id="myCarousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
-        <li data-slide-to="1" data-target="#myCarousel" class=""></li>
-        <li data-slide-to="2" data-target="#myCarousel" class=""></li>
-      </ol>
       <div class="carousel-inner">
         <div class="item active">
           <img src="http://<?php echo $host ?>:8080/?action=stream" />
@@ -76,9 +70,7 @@ $host = reset($host);
         </div>
       </div>
     </div>
-
     <div class="container">
-
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
