@@ -25,9 +25,9 @@ foreach($lsusb_out as $lsusb_out_row){
     <script type="text/javascript" src="js/html5shiv.js"></script>
     <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/buttons.js"></script>
     <script type="text/javascript" src="js/dozer.js"></script>
 
   </head>
