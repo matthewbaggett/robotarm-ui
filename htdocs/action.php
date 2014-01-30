@@ -49,14 +49,14 @@ switch($_GET['joint']){
   case 'hip':
     switch($_GET['action']){
       case 'up':
-        exec("robotarm 00 02 00");
+        exec("robotarm 40 00 00");
         sleep(1);
         exec("robotarm 00 00 00");
         break;
       case 'down':
-        exec("robotarm 40 00 00");
-        sleep(1);
         exec("robotarm 80 00 00");
+        sleep(1);
+        exec("robotarm 00 00 00");
         break;
     }
     break;
