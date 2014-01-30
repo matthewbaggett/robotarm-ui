@@ -13,6 +13,7 @@ function gamepadHandler(event, connecting) {
 
 function webkitGP() {
     var gp = navigator.webkitGetGamepads()[0];
+    console.log("webkitGP", gp);
     if(gp) {
         jQuery('.container.gamepad')
             .empty()
@@ -29,6 +30,8 @@ jQuery(document).ready(function(){
     })
 
     var gamepadSupportAvailable = Modernizr.gamepads;
+
+    console.log("Gamepad support available");
 
     if(gamepadSupportAvailable) {
         window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
