@@ -31,6 +31,14 @@ if($_GET['action']){
           sleep(1);
           $response = exec("robotarm 00 00 00");
         }
+      }elseif($_GET['action'] == 'toggle'){
+        if($lights_state == '01'){
+          unlink("/tmp/lights.lock");
+          exec("robotarm 00 00 00");
+        }else{
+          touch("/tmp/lights.lock");
+          exec("robotarm 00 00 01");
+        }
       }else{
         unlink("/tmp/lights.lock");
         exec("robotarm 00 00 00");

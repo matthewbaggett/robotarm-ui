@@ -37,6 +37,16 @@ function watchController(){
     if(gp.axes[3] > slop || gp.axes[3] < (slop*-1)){
         runController("action.php?joint=elbow&axes=" + gp.axes[3]);
     }
+
+    if(gp.buttons[0] == 1){
+        runController("action.php?joint=light&action=toggle");
+    }
+    if(gp.buttons[7] == 1){
+        runController("action.php?joint=grip&action=close");
+    }
+    if(gp.buttons[6] == 1){
+        runController("action.php?joint=grip&action=open");
+    }
 }
 
 function webkitGP() {
