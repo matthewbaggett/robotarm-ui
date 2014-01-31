@@ -1,5 +1,6 @@
-
 var gamepads = {};
+var intervalStartup;
+var intervalWatchAction;
 
 function gamepadHandler(event, connecting) {
     var gamepad = event.gamepad;
@@ -11,6 +12,11 @@ function gamepadHandler(event, connecting) {
     }
 }
 
+function watchController(){
+    var gp = navigator.webkitGetGamepads()[0];
+    jQuery('.container.gamepad').empty().append(gp.axes[0]);
+}
+
 function webkitGP() {
     var gp = navigator.webkitGetGamepads()[0];
     console.log("webkitGP", gp);
@@ -19,6 +25,7 @@ function webkitGP() {
             .empty()
             .append("Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.");
         clearInterval(interval);
+        intervalWatchAction = setInterval(watchController, 100);
     }
 }
 
@@ -35,8 +42,9 @@ jQuery(document).ready(function(){
     window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
     window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
     // Webkit browser that uses prefixes
-    var interval = setInterval(webkitGP, 500);
-    
+
+    intervalStartup = setInterval(webkitGP, 500);
+
 
 
 });
