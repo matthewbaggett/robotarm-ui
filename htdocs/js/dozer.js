@@ -47,6 +47,13 @@ function watchController(){
     if(gp.buttons[6] == 1){
         runController("action.php?joint=grip&action=open");
     }
+
+    if(gp.buttons[12] == 1){
+        runController("action.php?joint=wrist&action=up");
+    }
+    if(gp.buttons[13] == 1){
+        runController("action.php?joint=wrist&action=down");
+    }
 }
 
 function webkitGP() {
