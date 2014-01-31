@@ -24,7 +24,7 @@ function webkitGP() {
         jQuery('.container.gamepad')
             .empty()
             .append("Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.");
-        clearInterval(interval);
+        clearInterval(intervalStartup);
         intervalWatchAction = setInterval(watchController, 100);
     }
 }
