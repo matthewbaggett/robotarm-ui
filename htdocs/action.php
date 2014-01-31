@@ -121,7 +121,7 @@ if($_GET['axes']){
   while($begin >= microtime(true) - 0.2){
     switch($_GET['joint']){
       case 'hip':
-        $num = $_GET['axes'] > 0 ? '40' : '80';
+        $num = $_GET['axes'] < 0 ? '40' : '80';
         exec("robotarm {$num} 00 $lights_state");
         sleep(0.2 * $axes);
         exec("robotarm 00 00 $lights_state");
@@ -129,7 +129,7 @@ if($_GET['axes']){
         break;
 
       case 'waist':
-        $num = $_GET['axes'] > 0 ? '01' : '02';
+        $num = $_GET['axes'] < 0 ? '01' : '02';
         exec("robotarm 00 {$num} $lights_state");
         sleep(0.2 * $axes);
         exec("robotarm 00 00 $lights_state");
