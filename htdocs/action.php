@@ -140,6 +140,16 @@ if($_GET['axes']){
         }
         break;
 
+      case 'elbow':
+        $num = $_GET['axes'] < 0 ? '10' : '20';
+        exec("robotarm {$num} 00 $lights_state");
+        sleep(0.2 * $axes);
+        if($axes != 1){
+          exec("robotarm 00 00 $lights_state");
+          sleep(0.2 * ($axes*-1));
+        }
+        break;
+
     }
   }
   // All stop.
