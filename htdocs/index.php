@@ -67,9 +67,9 @@ foreach($lsusb_out as $lsusb_out_row){
     <?php if($has_controls): ?>
       <div class="container controls">
         <div class="btn-group light">
-          <a href="action.php?joint=light&action=on" class="btn btn-success btn-large left">Light On</a>
-          <a href="action.php?joint=light&action=rave" class="btn-large btn-warning btn left">Flash</a>
-          <a href="action.php?joint=light&action=off" class="btn-large btn-success btn left">Light Off</a>
+          <a href="action.php?joint=light&action=on" class="btn btn-success btn-large on">Light On</a>
+          <a href="action.php?joint=light&action=rave" class="btn-large btn-warning btn flash">Flash</a>
+          <a href="action.php?joint=light&action=off" class="btn-large btn-success btn off">Light Off</a>
         </div>
       </div>
       <div class="container controls">
@@ -91,13 +91,13 @@ foreach($lsusb_out as $lsusb_out_row){
         </div>
       </div>
       <div class="container controls">
-        <div class="btn-group hip">
+        <div class="btn-group shoulder-angle">
           <a href="action.php?joint=hip&action=up" class="btn btn-success btn-large left">Shoulder Up</a>
           <a href="action.php?joint=hip&action=down"  class="btn btn-success btn-large right">Shoulder Down</a>
         </div>
       </div>
       <div class="container controls">
-        <div class="btn-group waist">
+        <div class="btn-group shoulder-rotation">
           <a href="action.php?joint=waist&action=left" class="btn btn-success btn-large left">Shoulder Left</a>
           <a href="action.php?joint=waist&action=right"  class="btn btn-success btn-large right">Shoulder Right</a>
         </div>
