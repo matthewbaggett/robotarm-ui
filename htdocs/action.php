@@ -118,7 +118,7 @@ if($_GET['axes']){
   $begin = microtime(true);
   $axes = abs($_GET['axes']);
 
-  while($begin >= microtime() + 0.2){
+  while($begin >= microtime(true) - 0.2){
     switch($_GET['joint']){
       case 'hip':
         $num = $_GET['axes'] > 0 ? '40' : '80';
