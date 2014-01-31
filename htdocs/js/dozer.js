@@ -1,6 +1,7 @@
 var gamepads = {};
 var intervalStartup;
 var intervalWatchAction;
+var ajax_busy;
 
 function gamepadHandler(event, connecting) {
     var gamepad = event.gamepad;
@@ -14,6 +15,11 @@ function gamepadHandler(event, connecting) {
 
 function runController(url){
     console.log(url);
+    if(typeof(ajax_busy) == 'undefined' || ajax_busy.readyState == 4){
+        ajax_busy = jQuery.ajax(url, function(data){
+
+        });
+    }
 }
 
 function watchController(){
