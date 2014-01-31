@@ -12,13 +12,17 @@ function gamepadHandler(event, connecting) {
     }
 }
 
+function runController(url){
+    console.log(url);
+}
+
 function watchController(){
     var gp = navigator.webkitGetGamepads()[0];
     jQuery('.container.gamepad').empty().append(gp.axes[0]);
     if(gp.axes[0] > 0.1 || gp.axes[0] < -0.1){
-        jQuery.get("action.php?joint=waist&axes=" + gp.axes[0]);
+        runController("action.php?joint=waist&axes=" + gp.axes[0]);
     }else{
-        jQuery.get("action.php?joint=hip&axes=" + gp.axes[0]);
+        runController("action.php?joint=hip&axes=" + gp.axes[0]);
     }
 }
 
