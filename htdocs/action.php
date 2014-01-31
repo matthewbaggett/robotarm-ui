@@ -142,5 +142,7 @@ if($_GET['axes']){
 
     }
   }
+  // All stop.
+  exec("robotarm 00 00 $lights_state");
 }
 
