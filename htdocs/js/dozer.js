@@ -19,7 +19,7 @@ function runController(url){
 function watchController(){
     var gp = navigator.webkitGetGamepads()[0];
     jQuery('.container.gamepad').empty().append(gp.axes[0]);
-    if(gp.axes[0] > 0.1 || gp.axes[0] < -0.1){
+    if(gp.axes[0] > 0.2 || gp.axes[0] < -0.2){
         runController("action.php?joint=waist&axes=" + gp.axes[0]);
     }else{
         runController("action.php?joint=hip&axes=" + gp.axes[0]);
