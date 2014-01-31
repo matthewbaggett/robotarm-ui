@@ -26,7 +26,6 @@ function runController(url){
 
 function watchController(){
     var gp = navigator.webkitGetGamepads()[0];
-    console.log(gp);
     jQuery('.container.gamepad').empty().append(gp.axes[0] + " x " + gp.axes[1]);
     if(gp.axes[0] > slop || gp.axes[0] < (slop*-1)){
         runController("action.php?joint=waist&axes=" + gp.axes[0]);
@@ -58,7 +57,6 @@ function watchController(){
 
 function webkitGP() {
     var gp = navigator.webkitGetGamepads()[0];
-    console.log("webkitGP", gp);
     if(gp) {
         jQuery('.container.gamepad')
             .empty()
