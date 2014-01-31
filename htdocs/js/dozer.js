@@ -18,11 +18,12 @@ function runController(url){
 
 function watchController(){
     var gp = navigator.webkitGetGamepads()[0];
-    jQuery('.container.gamepad').empty().append(gp.axes[0]);
+    jQuery('.container.gamepad').empty().append(gp.axes[0] + " x " + gp.axes[1]);
     if(gp.axes[0] > 0.2 || gp.axes[0] < -0.2){
         runController("action.php?joint=waist&axes=" + gp.axes[0]);
-    }else{
-        runController("action.php?joint=hip&axes=" + gp.axes[0]);
+    }
+    if(gp.axes[1] > 0.2 || gp.axes[1] < -0.2){
+        runController("action.php?joint=hip&axes=" + gp.axes[1]);
     }
 }
 
@@ -34,7 +35,7 @@ function webkitGP() {
             .empty()
             .append("Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.");
         clearInterval(intervalStartup);
-        intervalWatchAction = setInterval(watchController, 100);
+        intervalWatchAction = setInterval(watchController, 500);
     }
 }
 
