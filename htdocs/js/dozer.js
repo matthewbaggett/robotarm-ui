@@ -3,6 +3,8 @@ var intervalStartup;
 var intervalWatchAction;
 var ajax_busy;
 
+var slop = 0.5;
+
 function gamepadHandler(event, connecting) {
     var gamepad = event.gamepad;
 
@@ -25,10 +27,10 @@ function runController(url){
 function watchController(){
     var gp = navigator.webkitGetGamepads()[0];
     jQuery('.container.gamepad').empty().append(gp.axes[0] + " x " + gp.axes[1]);
-    if(gp.axes[0] > 0.2 || gp.axes[0] < -0.2){
+    if(gp.axes[0] > slop || gp.axes[0] < (slop*-1)){
         runController("action.php?joint=waist&axes=" + gp.axes[0]);
     }
-    if(gp.axes[1] > 0.2 || gp.axes[1] < -0.2){
+    if(gp.axes[1] > slop || gp.axes[1] < (slop*-1)){
         runController("action.php?joint=hip&axes=" + gp.axes[1]);
     }
 }
