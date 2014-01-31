@@ -124,16 +124,20 @@ if($_GET['axes']){
         $num = $_GET['axes'] < 0 ? '40' : '80';
         exec("robotarm {$num} 00 $lights_state");
         sleep(0.2 * $axes);
-        exec("robotarm 00 00 $lights_state");
-        sleep(0.2 * ($axes*-1));
+        if($axes != 1){
+          exec("robotarm 00 00 $lights_state");
+          sleep(0.2 * ($axes*-1));
+        }
         break;
 
       case 'waist':
         $num = $_GET['axes'] < 0 ? '01' : '02';
         exec("robotarm 00 {$num} $lights_state");
         sleep(0.2 * $axes);
-        exec("robotarm 00 00 $lights_state");
-        sleep(0.2 * ($axes*-1));
+        if($axes != 1){
+          exec("robotarm 00 00 $lights_state");
+          sleep(0.2 * ($axes*-1));
+        }
         break;
 
     }
