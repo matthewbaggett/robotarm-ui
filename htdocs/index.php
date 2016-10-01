@@ -13,7 +13,7 @@ foreach($lsusb_out as $lsusb_out_row){
 <html xmlns="http://www.w3.org/1999/html">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dozer C&C</title>
+    <title>Yellow Arm</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -40,7 +40,7 @@ foreach($lsusb_out as $lsusb_out_row){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Dozer C&amp;C</a>
+          <a class="navbar-brand" href="#">Yellow Arm</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -58,7 +58,6 @@ foreach($lsusb_out as $lsusb_out_row){
           <img src="http://<?php echo $host ?>:8080/?action=stream" />
           <div class="container">
             <div class="carousel-caption">
-              <h1>DOZER</h1>
             </div>
           </div>
         </div>
